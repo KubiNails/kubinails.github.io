@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="home.css">
+    <!-- Preload the CSS file -->
+    <link rel="preload" href="home.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- Fallback for browsers that don't support preload -->
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
     <title>Kubi Nail</title>
 </head>
 <body>
@@ -23,9 +26,9 @@
                     </li>
 
                     <li>
-                        <button>
-                            <a href="">Contact Us</a>
-                        </button>
+                            <a href="">
+                             <button>Contact Us</button>
+                            </a>
                     </li>
             </ul>
         </div>
@@ -80,7 +83,7 @@
         </section>
         <section class="places">
             <div class="place-contain place1">
-                <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15776.50349955268!2d115.2310891!3d-8.6795781!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd241fabd9b75b3%3A0x5411e737072bb5ff!2sKUBI%20Studio!5e0!3m2!1sid!2sid!4v1717765909910!5m2!1sid!2sid"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe title = "Renon" class="maps" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15776.50349955268!2d115.2310891!3d-8.6795781!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd241fabd9b75b3%3A0x5411e737072bb5ff!2sKUBI%20Studio!5e0!3m2!1sid!2sid!4v1717765909910!5m2!1sid!2sid"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 <div class = "place-title">
                         <h2>Kubi Studio Renon</h2>
                         <h3>Jl. Petitenget No.98 Seminyak</h3>
@@ -88,7 +91,7 @@
                 </div>
             </div>
             <div class = "place-contain place2">
-                <iframe class = "maps" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15776.619407755197!2d115.154042!3d-8.6768202!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd2478f82ab77e1%3A0xff6ac3c700b6d437!2sKUBI%20Studio%20Seminyak!5e0!3m2!1sid!2sid!4v1717813706651!5m2!1sid!2sid"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe title = "Seminyak" class = "maps" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15776.619407755197!2d115.154042!3d-8.6768202!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd2478f82ab77e1%3A0xff6ac3c700b6d437!2sKUBI%20Studio%20Seminyak!5e0!3m2!1sid!2sid!4v1717813706651!5m2!1sid!2sid"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 <div class = "place-title">
                         <h2>Kubi Studio Seminyak</h2>
                         <h3>Jl. Tukad Batanghari III No.7</h3>
