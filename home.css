@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+:root{
+    font-size: 16px;
+    --soft-accent: #e4d3f3;
+}
+/* section1 */
+.title {
+    display: flex;
+    background-attachment:local;
+    width: 100%;
+    height: calc(100vh - 5rem);
+    background-image: url(img/bg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+}
+
+.title > * {
+    margin: 2rem 2rem;
+    color: white;
+}
+.title h2 {
+    font-size: 8rem;
+    padding-top: 2rem;
+    text-shadow: 0px 0px 5px #00000077;
+    margin-bottom: 0;
+}
+.title h3{
+    margin-top: 0;
+    font-size: 2rem;
+    font-family: 'Josefin Sans', sans-serif;
+    letter-spacing: 0.5rem;
+    font-weight: 300;
+}
+.title button{
+    font-size: 1.2rem;
+    padding: 1.5rem;
+}
+
+/* section2 */
+
+.services{
+    text-align: center;
+    color: white;
+    width: calc(100% - 2rem);
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.service1, .service2{
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.service{
+    background-color: #2d2d3a;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 1px 5px #00000077;
+    border-radius: 0rem 0rem 1rem 1rem;
+}
+.service h2{
+    font-family: 'Kaushan Script', cursive;
+}
+.service p{
+    max-width: 17rem;
+    margin-top: 0.5rem;
+    align-self: center;
+    font-family: "Ubuntu Sans Mono", monospace;
+}
+
+.service img{
+    width: 100%;
+    height: 8rem;
+    object-fit: cover;
+    object-position: center center;
+}
+.service h2 {
+    margin-bottom: 0;
+    letter-spacing: 0.5rem;
+    font-size: 2rem;
+}
+
+/* section3 */
+.places {
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.places > h2 {
+    color: #444444;
+    text-align: center;
+}
+.place-contain{
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+}
+.place-title{
+    padding: 2rem;
+    box-shadow: 1px 1px 5px #00000077;
+    border-radius: 10px;
+    background-color: white;
+    text-shadow: 1px 1px 5px #00000099;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.place-title h2{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 4rem;
+    margin-bottom: 0px;
+}
+.place-title h3{
+    font-family: 'Inconsolata', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    padding-left: 1rem;
+    margin-top: 0;
+}
+
+.place-title a{
+    display: inline-block;
+}
+.place-title button{
+    border: 2px solid white;
+    border-radius: 0;}
+
+.place1 .place-title{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-image: linear-gradient(0deg, #6d1ec855 ,#e03d8955), url(img/renon.webp);
+    background-size: cover;
+    background-position: top center;
+    color: white;
+    align-items: flex-end;
+}
+.place2 .place-title{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    background-image: linear-gradient(0deg, #6d1ec855 ,#e03d8955), url(img/seminyak.webp);
+    background-size: cover;
+    background-position: top center;
+    color: white;
+
+}
+
+/* big screen */
+
+@media only screen and (min-width: 900px){
+    .place1{
+        grid-template-columns: 30rem auto;
+    }
+    .place2{
+        grid-template-columns: auto 30rem;
+    }
+    .maps {
+        width: 30rem;
+        height: 30rem;
+        min-width: 18rem;
+        box-shadow: 1px 1px 5px #00000077;
+    }
+    .place1 .maps{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .place2 .maps{
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+
+}
+
+/* small screen */
+@media only screen and (max-width: 900px){
+    .place-contain{
+        display: flex;
+        gap: 1rem;
+        padding: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+    .maps{
+        width: 100%;
+        height: 12rem;
+    }
+    .places .place-title{
+        width: calc(100% - 3rem);
+    }
+}
+
+/* extra small screen */
+@media only screen and (max-width: 400px) {
+    .title h2 {
+        font-size: 6rem;
+    }
+    .title h3 {
+        font-size: 2rem;
+    }
+    .place-title h2{
+        font-size: 3rem;
+    }
+    body{
+        left: 0;
+        right: 0;
+    }
+}
