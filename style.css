@@ -23,6 +23,9 @@ background: var(--accent-color) ;
 body{
     margin: 0;
     padding: 0;
+    display: grid;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 ul{
@@ -90,6 +93,7 @@ nav {
     transition: 0.2s;
     justify-content: center;
     position: relative;
+    z-index: 45;
 }
 .navbar .item:hover{
     background-color: var(--accent-color);
@@ -124,9 +128,11 @@ button a{
     padding: 0;
     color: var(--text-primary);
     box-shadow: 1px 1px 5px #444454dd;
+    z-index: 10;
 }
 .navbar .item:hover .pricing{
     display: flex;
+    z-index: 19;
 }
 
 .navbar .item li{
@@ -146,12 +152,11 @@ footer{
     background-color: var(--text-primary);
     display: flex;
     width: 100%;
-    margin: 0;
-    margin-top: auto;
     padding-bottom: 1rem;
     color: var(--bg-secondary);
     flex-wrap: wrap;
     font-family: 'Comfortaa', sans-serif;
+    align-self: flex-end;
 }
 
 footer div{
@@ -217,11 +222,48 @@ footer .info .social-item{
 .social-item span{
     margin-left: 0.5rem;
 }
+.social-item a{
+    display: flex;
+    align-items: center;
+    min-width: fit-content;
+}
 
 /* medium screen */
 
 @media only screen and (max-width:900px){
     footer .logo-contain{
         display: none;
+    }
+}
+
+/* main animation */
+
+.hide, .hide > *, .hide > * > *{
+    opacity: 0;
+    transform: translateX(-12rem);
+    filter: blur(10px);
+    transition: 400ms;
+}
+
+.hide > *:first-child{
+    transition-delay: 0s;
+}
+.hide > *:nth-child(2){
+    transition-delay: 200ms;
+}
+.hide > *:nth-child(3){
+    transition-delay: 400ms;
+}
+
+.show, .show > *, .show > * > *{
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+}
+
+/* reduced motion */
+@media (prefers-reduced-motion){
+    .hide, .hide > *, .hide > * > *{
+    transition: none;
     }
 }
