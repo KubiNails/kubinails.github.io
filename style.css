@@ -242,7 +242,7 @@ footer .info .social-item{
     opacity: 0;
     transform: translateX(-12rem);
     filter: blur(10px);
-    transition: 400ms;
+    transition: 600ms;
 }
 
 .hide > *:first-child{
